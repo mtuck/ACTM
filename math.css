@@ -1,0 +1,97 @@
+body{
+background: rgba(255,255,255,1);
+background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 0%, rgba(5,56,142,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(0%, rgba(246,246,246,1)), color-stop(100%, rgba(5,56,142,1)));
+background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 0%, rgba(5,56,142,1) 100%);
+background: -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 0%, rgba(5,56,142,1) 100%);
+background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 0%, rgba(5,56,142,1) 100%);
+background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 0%, rgba(5,56,142,1) 100%);
+
+}
+
+@media (min-width: 601px){
+div.outside{
+	background-color: white;
+	margin-right:25%;
+	margin-left: 25%;
+	min-width:450px;
+	border-style: solid;
+	border-width: 2px;
+	color: black;
+	padding: 10px;
+}
+}
+
+
+
+@media (max-width: 600px){
+div.outside{
+	background-color: white;
+	margin-right:0%;
+	margin-left: 0%;
+	width:100%;
+	border-style: solid;
+	border-width: 2px;
+	color: black;
+	padding: 10px;
+}
+}
+
+
+
+p{
+	margin-bottom: 2px;
+	margin-top:4px;
+}
+
+input{
+/*Please make sure input boxes get lined up by their right side*/
+	margin-left: 4px;
+}
+
+select{
+	margin-bottom: 12px;
+	margin-right:	110px;
+}
+@media (min-width: 601px){
+img.logo{
+/*This might need to be changed or put into a more general DIV for center-ing reasons*/
+	margin-left:25%;
+	height:200px;
+	margin-bottom:5px;
+}
+}
+
+@media (max-width: 600px){
+img.logo{
+/*This might need to be changed or put into a more general DIV for center-ing reasons*/
+	width:300px;
+	margin-bottom:5px;
+}
+}
+
+h3{
+	color:#05388E;
+}
+
+
+@media (max-width: 500px){
+h3.entries{
+	font-size:1em;
+}
+label{
+	font-size:.8em;
+}
+}
+
+.container{
+	background-color:white;
+	margin-bottom:5px;
+
+}
+
+
+pre{
+	font-family: Georgia, serif;
+	font-size:	20px;
+}

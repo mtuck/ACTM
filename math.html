@@ -1,0 +1,520 @@
+<!DOCTYPE html><html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" href="bootstrapValidator.min.css"/>
+  <!-- Martin Tuck, Amy Brown, Stephen Mardis -->
+  <meta name="generator" content=
+  "HTML Tidy for Linux/x86 (vers 25 March 2009), see www.w3.org" />
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href=
+  "https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" type=
+  "text/css" /><!-- Optional theme -->
+  <link rel="stylesheet" href=
+  "https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" type=
+  "text/css" /><!-- Latest compiled and minified JavaScript -->
+
+ 
+  <meta charset="utf-8" />
+
+  <title>Registration Form</title>
+  <link rel="stylesheet" href=
+  "http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css" type="text/css" />
+  <link rel="stylesheet" href="math.css" type="text/css" />
+
+</head>
+
+<body onload="hidestuff()">
+
+
+
+
+
+  <img class="logo" src="logo.png" alt="alabama statewide math contest" />
+
+  <div class="container">
+    <h3>School Info</h3>
+	
+	
+
+
+
+
+
+  <form id="profileForm" class="form-horizontal"
+    data-bv-feedbackicons-valid="glyphicon glyphicon-ok"
+    data-bv-feedbackicons-invalid="glyphicon glyphicon-exclamation-sign"
+    data-bv-feedbackicons-validating="glyphicon glyphicon-refresh">
+	
+      <div class="form-group">
+        <label class="col-md-1">School</label>
+
+        <div class="col-md-2">
+          <select class="form-control" onchange="otherSchool(this)">
+            <option id="school1">
+              School 1
+            </option>
+
+            <option id="school2">
+              School 2
+            </option>
+
+            <option id="school3">
+              School 3
+            </option>
+
+            <option id="school4">
+              School 4
+            </option>
+
+            <option id="school5">
+              School 5
+            </option>
+
+            <option id="school6">
+              School 6
+            </option>
+
+            <option id="school7">
+              School 7
+            </option>
+
+            <option id="other">
+              Other
+            </option>
+          </select>
+        </div>
+      </div>
+
+      <div class="clearfix"></div>
+	  
+
+      <div id="otherInfo">
+         <div class="form-group">
+          <label class="col-md-1">School-Name:</label>
+
+          <div class="col-md-2">
+             <input  placeholder="School Name" type="text" class="form-control" name="schoolName"
+				data-bv-notempty="true"
+                data-bv-notempty-message="The school's name is required and cannot be empty"
+                data-bv-regexp="true"
+                data-bv-regexp-regexp="^([1-zA-Z0-1@. \- \s]{1,255})$"
+                data-bv-regexp-message="Please enter a valid school name" />
+          </div>
+        
+
+       
+          <label class="col-md-1">Address:</label>
+
+          <div class="col-md-2">
+            <input  placeholder="123 main st" type="text" class="form-control" name="schoolAddr"
+				data-bv-notempty="true"
+                data-bv-notempty-message="The school street address is required and cannot be empty"
+                data-bv-regexp="true"
+                data-bv-regexp-regexp="^([1-zA-Z0-1@ \- .\s]{1,255})$"
+				data-bv-regexp-message="Please enter a valid street address"
+                 />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-md-1">City:</label>
+
+          <div class="col-md-2">
+            <input  placeholder="City" type="text" class="form-control" name="city"
+				data-bv-notempty="true"
+                data-bv-notempty-message="The school's city is required and cannot be empty"
+                data-bv-regexp="true"
+                data-bv-regexp-regexp="^([1-zA-Z0-1@.\- \s]{1,255})$"
+				data-bv-regexp-message="Please enter a valid city name"
+                 />
+          </div>
+        
+
+
+
+        
+          <label class="col-md-1">State:</label>
+
+          <div class="col-md-2">
+            <input class="form-control" value="AL" disabled/>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-md-1">Zip:</label>
+
+          <div class="col-md-2">
+                <input  placeholder="Zip Code" type="text" class="form-control" name="schoolZip"
+				data-bv-notempty="true"
+                data-bv-notempty-message="The school's zip is required and cannot be empty"
+                data-bv-regexp="true"
+                data-bv-regexp-regexp="^\d{5}$"
+				data-bv-regexp-message="Use 5 Digit Zip code"
+                 />
+          </div>
+        </div>
+      </div>
+
+      <div class="clearfix"></div>
+      <hr />
+
+      <h3>Sponsor 1</h3>
+
+      <div class="form-group">
+        <label class="col-md-1">Name:</label>
+
+        <div class="col-md-2">
+               <input  placeholder="First Last" type="text" class="form-control" name="spon1Name"
+				data-bv-notempty="true"
+                data-bv-notempty-message="The sponsor's name is required and cannot be empty"
+                data-bv-regexp="true"
+                data-bv-regexp-regexp="^([1-zA-Z0-1@. \- \s]{1,255})$"
+                data-bv-regexp-message="Please enter first name followed by last" />
+        </div>
+     
+
+    
+        <label class="col-md-1">Email:</label>
+
+      
+        <div class="col-md-2">
+               <input  placeholder="John@mail.com" type="text" class="form-control" name="spon1Email"
+				data-bv-notempty="true"
+                data-bv-notempty-message="The sponsor's email is required and cannot be empty"
+                data-bv-regexp="true"
+                data-bv-regexp-regexp="^([\w\-\.]+)@((\[([0-9]{1,3}\.){3}[0-9]{1,3}\])|(([\w\-]+\.)+)([a-zA-Z]{2,4}))$"
+                data-bv-regexp-message="Please enter valid email" />
+        </div>
+     
+
+     
+        <label class="col-md-1">Phone Number:</label>
+
+        <div class="col-md-2">
+                <input  placeholder="999-999-9999" type="text" class="form-control" name="spon1Phone"
+				data-bv-notempty="true"
+                data-bv-notempty-message="The sponsor's phone number is required and cannot be empty"
+                data-bv-regexp="true"
+                data-bv-regexp-regexp="^(\+0?1\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$"
+                data-bv-regexp-message="Please enter phone number of form 999-999-9999" />
+        </div>
+      </div>
+
+      <div class="clearfix"></div>
+
+      <div id="Sponsor2">
+       <h3>Sponsor 2</h3>
+
+      <div class="form-group">
+        <label class="col-md-1">Name:</label>
+
+        <div class="col-md-2">
+               <input  placeholder="First Last" type="text" class="form-control" name="spon2Name"
+				data-bv-notempty="false"
+                data-bv-regexp="true"
+                data-bv-regexp-regexp="^([1-zA-Z0-1@. \- \s]{1,255})$"
+                data-bv-regexp-message="Please enter first name followed by last" />
+        </div>
+     
+
+    
+        <label class="col-md-1">Email:</label>
+
+      
+        <div class="col-md-2">
+               <input  placeholder="John@mail.com" type="text" class="form-control" name="spon2Email"
+                data-bv-regexp="true"
+                data-bv-regexp-regexp="^([\w\-\.]+)@((\[([0-9]{1,3}\.){3}[0-9]{1,3}\])|(([\w\-]+\.)+)([a-zA-Z]{2,4}))$"
+                data-bv-regexp-message="Please enter valid email" />
+        </div>
+     
+
+     
+        <label class="col-md-1">Phone Number:</label>
+
+        <div class="col-md-2">
+                <input  placeholder="999-999-9999" type="text" class="form-control" name="spon2Phone"
+                data-bv-regexp="true"
+                data-bv-regexp-regexp="^(\+0?1\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$"
+                data-bv-regexp-message="Please enter phone number of form 999-999-9999" />
+        </div>
+      </div>
+      </div>
+
+      <div class="clearfix"></div>
+
+      <div id="Sponsor3" hidden="">
+          <h3>Sponsor 3</h3>
+
+      <div class="form-group">
+        <label class="col-md-1">Name:</label>
+
+        <div class="col-md-2">
+               <input  placeholder="First Last" type="text" class="form-control" name="spon3Name"
+                data-bv-regexp="true"
+                data-bv-regexp-regexp="^([1-zA-Z0-1@. \- \s]{1,255})$"
+                data-bv-regexp-message="Please enter first name followed by last" />
+        </div>
+     
+
+    
+        <label class="col-md-1">Email:</label>
+
+      
+        <div class="col-md-2">
+               <input  placeholder="John@mail.com" type="text" class="form-control" name="spon3Email"
+                data-bv-regexp="true"
+                data-bv-regexp-regexp="^([\w\-\.]+)@((\[([0-9]{1,3}\.){3}[0-9]{1,3}\])|(([\w\-]+\.)+)([a-zA-Z]{2,4}))$"
+                data-bv-regexp-message="Please enter valid email" />
+        </div>
+     
+
+     
+        <label class="col-md-1">Phone Number:</label>
+
+        <div class="col-md-2">
+                <input  placeholder="999-999-9999" type="text" class="form-control" name="spon3Phone"
+                data-bv-regexp="true"
+                data-bv-regexp-regexp="^(\+0?1\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$"
+                data-bv-regexp-message="Please enter phone number of form 999-999-9999" />
+        </div>
+      </div>
+      </div>
+
+      <div class="clearfix"></div>
+
+      <div id="Sponsor4" hidden="">
+		       <h3>Sponsor 4</h3>
+
+      <div class="form-group">
+        <label class="col-md-1">Name:</label>
+
+        <div class="col-md-2">
+               <input  placeholder="First Last" type="text" class="form-control" name="spon4Name"
+                data-bv-regexp="true"
+                data-bv-regexp-regexp="^([1-zA-Z0-1@. \- \s]{1,255})$"
+                data-bv-regexp-message="Please enter first name followed by last" />
+        </div>
+     
+
+    
+        <label class="col-md-1">Email:</label>
+
+      
+        <div class="col-md-2">
+               <input  placeholder="John@mail.com" type="text" class="form-control" name="spon4Email"
+                data-bv-regexp="true"
+                data-bv-regexp-regexp="^([\w\-\.]+)@((\[([0-9]{1,3}\.){3}[0-9]{1,3}\])|(([\w\-]+\.)+)([a-zA-Z]{2,4}))$"
+                data-bv-regexp-message="Please enter valid email" />
+        </div>
+     
+
+     
+        <label class="col-md-1">Phone Number:</label>
+
+        <div class="col-md-2">
+                <input  placeholder="999-999-9999" type="text" class="form-control" name="spon4Phone"
+                data-bv-regexp="true"
+                data-bv-regexp-regexp="^(\+0?1\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$"
+                data-bv-regexp-message="Please enter phone number of form 999-999-9999" />
+        </div>
+      </div>
+      </div>
+
+      <div class="clearfix"></div>
+
+      <div class="col-md-1">
+        <input type="button" value="Add Sponsor" onclick="addSponsor()" id="addButton"
+        class="btn btn-default" />
+      </div>
+
+      <div class="clearfix"></div>
+      <hr />
+
+      <h3>Divisions</h3>
+<div id="divisionTable">
+      <div class="col-md-4">
+        <h4>*Division 1:</h4>The Division One competition is for public schools which are
+        large enough to be classified as 6A in athletics and private schools offering
+        calculus.
+      </div>
+
+      <div class="col-md-4">
+        <h4>*Division 2:</h4>The Division Two competition is for public schools
+        classified as 5A or 4A in athletics and private schools which offer only one year
+        of mathematics beyond both Algebra II with Trigonometry and Geometry
+      </div>
+
+      <div class="col-md-4">
+        <h4>*Division 3:</h4>The Division Three competition is for public schools
+        classified as 3A, 2A, or 1A in athletics and private schools offering no
+        mathematics beyond Algebra II with Trigonometry and Geometry.
+      </div>
+</div>
+      <div class="clearfix"></div><br />
+
+      <div class="control-group">
+        <a onclick="showDivs()"><label class="col-md-3" >Select Division <span class="glyphicon glyphicon-question-sign"></span></label></a>
+        <div class="col-md-3">
+          <select class="form-control">
+            <option id="div1">
+              Division 1
+            </option>
+
+            <option id="div2">
+              Division 2
+            </option>
+
+            <option id="div3">
+              Division 3
+            </option>
+          </select>
+        </div>
+      </div>
+
+      <div class="clearfix"></div>
+
+      <div class="control-group">
+        <label class="col-md-3">Testing Site:</label>
+
+        <div class="col-md-3">
+          <select class="form-control">
+            <option id="site1">
+              Site 1
+            </option>
+
+            <option id="site2">
+              Site 2
+            </option>
+
+            <option id="site3">
+              Site 3
+            </option>
+          </select>
+        </div>
+      </div>
+
+      <div class="clearfix"></div>
+      <hr />
+
+      <h3>Entries</h3>*$5.00 per entry, $10.00 for team
+
+      <div class="clearfix"></div>
+
+      <div class="col-xs-4">
+        <h3 class="entries">Section</h3>
+      </div>
+
+      <div class="col-xs-4">
+        <h3 class="entries">Number of entries</h3>
+      </div>
+
+      <div class="col-xs-4">
+        <h3 class="entries">Price</h3>
+      </div>
+
+      <div class="clearfix"></div>
+
+      <div class="control-group">
+        <label class="col-xs-4">Comprehensive</label>
+
+        <div class="col-xs-4">
+          <input id="compEnt" oninput="isValNum('compEnt')" type="number" required=""
+          class="form-control" value="0" />
+        </div>
+
+        <div class="col-xs-4">
+          <input id="compTot" type="text" class="form-control" value="$0" disabled=
+          "disabled" />
+        </div>
+      </div>
+
+      <div class="clearfix"></div>
+
+      <div class="control-group">
+        <label class="col-xs-4">Algebra II W/Trig</label>
+
+        <div class="col-xs-4">
+          <input oninput="isValNum('trigEnt')" id="trigEnt" type="number" required=""
+          class="form-control" value="0" />
+        </div>
+
+        <div class="col-xs-4">
+          <input id="trigTot" type="text" class="form-control" value="$0" disabled=
+          "disabled" />
+        </div>
+      </div>
+
+      <div class="clearfix"></div>
+
+      <div class="control-group">
+        <label class="col-xs-4">Geometry</label>
+
+        <div class="col-xs-4">
+          <input oninput="isValNum('geomEnt')" id="geomEnt" type="number" required=""
+          class="form-control" value="0" />
+        </div>
+
+        <div class="col-xs-4">
+          <input id="geomTot" type="text" class="form-control" value="$0" disabled=
+          "disabled" />
+        </div>
+      </div>
+
+      <div class="clearfix"></div>
+
+      <div class="control-group">
+        <label class="col-xs-4">Team</label>
+
+        <div class="col-xs-4">
+          <input type="number" class="form-control" value="1" disabled="disabled" />
+        </div>
+
+        <div class="col-xs-4">
+          <input type="text" class="form-control" value="$10" disabled="disabled" />
+        </div>
+      </div>
+
+      <div class="clearfix"></div>
+      <hr />
+
+      <div class="control-group">
+        <label class="col-xs-8">Total</label>
+
+        <div class="col-xs-4">
+          <input id="total" type="text" class="form-control" value="$10" disabled=
+          "disabled" />
+        </div>
+      </div>
+
+      <div class="clearfix"></div>
+      <hr />
+
+      <p>Please make your check for the above amount payable to Alabama Council of
+      Teachers of Mathematics. Mail your check to:</p>
+
+      <h4>University of North Alabama, Dept of Mathematics</h4>
+
+      <h4>ATTN: AL HS Math Contest</h4>
+
+      <h4>One Harrison Plaza, Box 5051</h4>
+
+      <h4>Florence, AL 35632</h4>
+      <hr />
+
+      <div class="col-xs-12">
+       <input type="submit" value="Submit" class="btn btn-danger btn-lg" />
+      </div>
+    </form>
+<div class="clearfix"></div>
+<br>
+	</div>
+	
+	
+	
+	
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="bootstrap.min.js"></script>
+<script type="text/javascript" src="bootstrapValidator.min.js"></script>
+<script src="math.js"></script>
+</body>
+</html>
