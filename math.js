@@ -3,6 +3,8 @@
 //Martin Tuck, Amy Brown, Stephen Mardis actm javascript
 
 
+var xhr = new XMLHttpRequest();
+
 
 
 function hidestuff(){
@@ -35,7 +37,7 @@ function otherSchool(name){
 
 
 
-$(document).ready(function() {
+$(document).ready(function(){
     $('#profileForm').bootstrapValidator();
 });
 
@@ -74,6 +76,41 @@ function isValNum(item){
 
 
 
+
+
+
+xhr.onreadystatechange = function(){
+
+if(xhr.readyState==4){
+
+var tags = JSON.parse(xhr.responseText);
+
+$( "#autocomplete" ).autocomplete({
+source: function( request, response ) {
+var matcher = new RegExp( "^" + $.ui.autocomplete.escapeRegex( request.term ), "i" );
+response( $.grep( tags, function( item ){
+return matcher.test( item );
+}) );
+}
+});
+}
+
+
+
+};
+
+	
+$( "#autocomplete" ).keyup(function(){
+	var requestString = $( "#autocomplete" ).val()+"*";
+	xhr.send(requestString);
+});
+
+
+
+
+
+
+
 function addSponsor(){
 	if(document.getElementById("Sponsor2").style.display == "none"){
 		document.getElementById("Sponsor2").style.display = "block";
@@ -93,3 +130,9 @@ function addSponsor(){
 		return;
 	}
 }
+
+
+
+
+xhr.open('POST', 'list.php','true');
+

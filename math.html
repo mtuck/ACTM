@@ -11,15 +11,22 @@
   <link rel="stylesheet" href=
   "https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" type=
   "text/css" /><!-- Latest compiled and minified JavaScript -->
+	
+	
+	  <link rel="stylesheet" href="jquery-ui.css">
 
- 
+  <script src="jquery-1.10.2.js"></script>
+
+  <script src="jquery-ui.js"></script>
+
+
   <meta charset="utf-8" />
 
   <title>Registration Form</title>
   <link rel="stylesheet" href=
   "http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css" type="text/css" />
   <link rel="stylesheet" href="math.css" type="text/css" />
-
+	<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css" />
 </head>
 
 <body onload="hidestuff()">
@@ -36,6 +43,10 @@
 	
 
 
+ 
+
+
+
 
 
 
@@ -45,42 +56,12 @@
     data-bv-feedbackicons-validating="glyphicon glyphicon-refresh">
 	
       <div class="form-group">
-        <label class="col-md-1">School</label>
+    
+
 
         <div class="col-md-2">
-          <select class="form-control" onchange="otherSchool(this)">
-            <option id="school1">
-              School 1
-            </option>
-
-            <option id="school2">
-              School 2
-            </option>
-
-            <option id="school3">
-              School 3
-            </option>
-
-            <option id="school4">
-              School 4
-            </option>
-
-            <option id="school5">
-              School 5
-            </option>
-
-            <option id="school6">
-              School 6
-            </option>
-
-            <option id="school7">
-              School 7
-            </option>
-
-            <option id="other">
-              Other
-            </option>
-          </select>
+				<label for="autocomplete">Select School </label>
+				<input id="autocomplete">
         </div>
       </div>
 
@@ -507,14 +488,23 @@
     </form>
 <div class="clearfix"></div>
 <br>
+
+
 	</div>
 	
 	
 	
-	
-<script src="http://code.jquery.com/jquery-latest.js"></script>
+ 
+
+
+
+
+
 <script src="bootstrap.min.js"></script>
 <script type="text/javascript" src="bootstrapValidator.min.js"></script>
 <script src="math.js"></script>
+
+
+
 </body>
 </html>
