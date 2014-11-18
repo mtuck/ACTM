@@ -1,3 +1,4 @@
 <?php
-echo "[\"martin\"]"
+
+ echo "[\"martin\",\"Stephen\",\"Amy\"]";
 ?>

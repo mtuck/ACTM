@@ -3,7 +3,7 @@
 //Martin Tuck, Amy Brown, Stephen Mardis actm javascript
 
 
-var xhr = new XMLHttpRequest();
+
 
 
 
@@ -79,12 +79,8 @@ function isValNum(item){
 
 
 
-xhr.onreadystatechange = function(){
-
-if(xhr.readyState==4){
-
-var tags = JSON.parse(xhr.responseText);
-
+$.getJSON('list.php',function(list){
+var tags = list;
 $( "#autocomplete" ).autocomplete({
 source: function( request, response ) {
 var matcher = new RegExp( "^" + $.ui.autocomplete.escapeRegex( request.term ), "i" );
@@ -93,11 +89,7 @@ return matcher.test( item );
 }) );
 }
 });
-}
-
-
-
-};
+});
 
 	
 $( "#autocomplete" ).keyup(function(){
@@ -134,5 +126,5 @@ function addSponsor(){
 
 
 
-xhr.open('POST', 'list.php','true');
+
 
