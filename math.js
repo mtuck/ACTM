@@ -93,9 +93,7 @@ return matcher.test( item );
 
 	
 $( "#autocomplete" ).keyup(function(){
-	var requestString = $( "#autocomplete" ).val()+"*";
-	xhr.send(requestString);
-});
+	});
 
 
 
