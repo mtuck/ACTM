@@ -11,7 +11,7 @@ function hidestuff(){
 	document.getElementById("Sponsor2").style.display = "none";
 	document.getElementById("Sponsor3").style.display = "none";
 	document.getElementById("Sponsor4").style.display = "none";
-	document.getElementById("otherInfo").style.display = "none";
+	//document.getElementById("otherInfo").style.display = "none";
 	document.getElementById("divisionTable").style.display = "none";
 }
 
@@ -73,7 +73,11 @@ function isValNum(item){
 
 
 
+$( ".divLabel" ).click(function(){
+	
+		$( '#divisionTable' ).toggle( "slow");
 
+});
 
 
 
@@ -92,8 +96,25 @@ return matcher.test( item );
 });
 
 	
-$( "#autocomplete" ).keyup(function(){
+$( "#autocomplete" ).change(function(){
+	var school = "school=";
+	school += $( "#autocomplete" ).val();
+
+	
+	$.get('address.php',school,function(adr){
+		$("#schoolAddr").val(adr);
 	});
+	
+	$.get('zip.php',school,function(zip){
+		$("#zip").val(zip);
+	});
+	
+	$.get('city.php',school,function(cty){
+		$("#city").val(cty);
+	});
+	
+
+});
 
 
 

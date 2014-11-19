@@ -44,8 +44,8 @@
 
      
      <div class="form-group">
-     <label class="col-sm-2">School Name:</label>
-            <div class="col-sm-4">
+     <label class="col-sm-2 control-label">School Name:</label>
+            <div class="col-sm-10">
                <input  placeholder="School Name" type="text" class="form-control"  id="autocomplete">
         </div>
      
@@ -57,10 +57,10 @@
 
 <div class="form-group">
        
-          <label class="col-md-1">Street Address:</label>
+          <label class="control-label col-sm-2">Street Address:</label>
 
-          <div class="col-md-5">
-            <input  placeholder="123 main st" type="text" class="form-control" name="schoolAddr"
+          <div class="col-sm-10">
+            <input  placeholder="123 main st" type="text" class="form-control" id="schoolAddr" name="schoolAddr"
 				data-bv-notempty="true"
                 data-bv-notempty-message="The school street address is required and cannot be empty"
                 data-bv-regexp="true"
@@ -71,10 +71,10 @@
         </div>
 
         <div class="form-group">
-          <label class="col-md-1">City:</label>
+          <label class="control-label col-sm-2">City:</label>
 
-          <div class="col-md-2">
-            <input  placeholder="City" type="text" class="form-control" name="city"
+          <div class="col-sm-10">
+            <input  placeholder="City" type="text" class="form-control" id="city" name="city"
 				data-bv-notempty="true"
                 data-bv-notempty-message="The school's city is required and cannot be empty"
                 data-bv-regexp="true"
@@ -82,23 +82,21 @@
 				data-bv-regexp-message="Please enter a valid city name"
                  />
           </div>
-        
+        </div>
 
+          <div class="form-group">
+          <label class="col-sm-2 control-label">State:</label>
 
-
-        
-          <label class="col-md-1">State:</label>
-
-          <div class="col-md-2">
-            <input class="form-control" value="AL" disabled/>
+          <div class="col-sm-10">
+            <input id="state" class="form-control" value="AL" disabled/>
           </div>
         </div>
 
         <div class="form-group">
-          <label class="col-md-1">Zip:</label>
+          <label class="col-sm-2 control-label">Zip:</label>
 
-          <div class="col-md-2">
-                <input  placeholder="Zip Code" type="text" class="form-control" name="schoolZip"
+          <div class="col-sm-10">
+                <input id="zip"  placeholder="Zip Code" type="text" class="form-control" name="schoolZip"
 				data-bv-notempty="true"
                 data-bv-notempty-message="The school's zip is required and cannot be empty"
                 data-bv-regexp="true"
@@ -115,7 +113,7 @@
       <h3>Sponsor 1</h3>
 
       <div class="form-group">
-        <label class="col-sm-2">Name:</label>
+        <label class="col-sm-2 control-label">Name:</label>
 
         <div class="col-sm-4">
                <input  placeholder="First Last" type="text" class="form-control" name="spon1Name"
@@ -131,7 +129,7 @@
        
 
      
-        <label class="col-sm-2">Phone Number:</label>
+        <label class="col-sm-2 control-label">Phone Number:</label>
 
         <div class="col-sm-4">
                 <input  placeholder="999-999-9999" type="text" class="form-control" name="spon1Phone"
@@ -141,7 +139,7 @@
         </div>
 		</div>
 		<div class="form-group">
-		 <label class="col-sm-2">Email:</label>
+		 <label class="col-sm-2 control-label">Email:</label>
 		        <div class="col-sm-4">
                <input  placeholder="John@mail.com" type="text" class="form-control" name="spon1Email"
                 data-bv-regexp="true"
@@ -158,7 +156,7 @@
        <h3>Sponsor 2</h3>
 
       <div class="form-group">
-        <label class="col-sm-2">Name:</label>
+        <label class="col-sm-2 control-label">Name:</label>
 
         <div class="col-sm-4">
                <input  placeholder="First Last" type="text" class="form-control" name="spon2Name"
@@ -172,7 +170,7 @@
        
 
      
-        <label class="col-sm-2">Phone Number:</label>
+        <label class="col-sm-2 control-label">Phone Number:</label>
 
         <div class="col-sm-4">
                 <input  placeholder="999-999-9999" type="text" class="form-control" name="spon2Phone"
@@ -184,7 +182,7 @@
         </div>
 		</div>
 		<div class="form-group">
-		 <label class="col-sm-2">Email:</label>
+		 <label class="col-sm-2 control-label">Email:</label>
 		        <div class="col-sm-4">
                <input  placeholder="John@mail.com" type="text" class="form-control" name="spon2Email"
 				data-bv-notempty="true"
@@ -204,7 +202,7 @@
           <h3>Sponsor 3</h3>
 
       <div class="form-group">
-        <label class="col-sm-2">Name:</label>
+        <label class="col-sm-2 control-label">Name:</label>
 
         <div class="col-sm-4">
                <input  placeholder="First Last" type="text" class="form-control" name="spon3Name"
@@ -218,7 +216,7 @@
        
 
      
-        <label class="col-sm-2">Phone Number:</label>
+        <label class="col-sm-2 control-label">Phone Number:</label>
 
         <div class="col-sm-4">
                 <input  placeholder="999-999-9999" type="text" class="form-control" name="spon3Phone"
@@ -230,7 +228,7 @@
         </div>
 		</div>
 		<div class="form-group">
-		 <label class="col-sm-2">Email:</label>
+		 <label class="col-sm-2 control-label">Email:</label>
 		        <div class="col-sm-4">
                <input  placeholder="John@mail.com" type="text" class="form-control" name="spon3Email"
 				data-bv-notempty="true"
@@ -250,7 +248,7 @@
 		       <h3>Sponsor 4</h3>
 
   <div class="form-group">
-        <label class="col-sm-2">Name:</label>
+        <label class="col-sm-2 control-label">Name:</label>
 
         <div class="col-sm-4">
                <input  placeholder="First Last" type="text" class="form-control" name="spon4Name"
@@ -264,7 +262,7 @@
        
 
      
-        <label class="col-sm-2">Phone Number:</label>
+        <label class="col-sm-2 control-label">Phone Number:</label>
 
         <div class="col-sm-4">
                 <input  placeholder="999-999-9999" type="text" class="form-control" name="spon4Phone"
@@ -276,7 +274,7 @@
         </div>
 		</div>
 		<div class="form-group">
-		 <label class="col-sm-2">Email:</label>
+		 <label class="col-sm-2 control-label">Email:</label>
 		        <div class="col-sm-4">
                <input  placeholder="John@mail.com" type="text" class="form-control" name="spon4Email"
 				data-bv-notempty="true"
@@ -323,7 +321,7 @@
       <div class="clearfix"></div><br />
 
       <div class="form-group">
-        <a onclick="showDivs()"><label class="col-sm-2" >Select Division <span class="glyphicon glyphicon-question-sign"></span></label></a>
+        <div class="divLabel"><label class="col-sm-2 control-label" >Select Division <span class="glyphicon glyphicon-question-sign"/></label></div>
         <div class="col-sm-4">
           <select class="form-control">
             <option id="div1">
@@ -340,7 +338,7 @@
           </select>
         </div>
     
-        <label class="col-sm-2">Testing Site:</label>
+        <label class="col-sm-2 control-label">Testing Site:</label>
         <div class="col-sm-4">
           <select class="form-control">
             <option id="site1">
