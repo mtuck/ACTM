@@ -1,4 +1,21 @@
 <?php
+	
+	$to = filter_var($_POST['spon1Email'], FILTER_SANITIZE_EMAIL);
+	$comp = filter_var($_POST['compEnt'], FILTER_SANITIZE_NUMBER_INT);
+	$geom = filter_var($_POST['geomEnt'], FILTER_SANITIZE_NUMBER_INT);
+	$trig = filter_var($_POST['trigEnt'], FILTER_SANITIZE_NUMBER_INT);
+	$total = filter_var($_POST['total'], FILTER_SANITIZE_NUMBER_INT);
+	$school = filter_var($_POST['autocomplete'], FILTER_SANITIZE_STRING);
+	$subject = "ACTM Receipt";
+	
+	$message = "Receipt for $school: \n
+					\t Comprehensive: $comp \n
+					\t Algebra II W/Trig: $trig \n
+					\t Geometry: $geom \n
+					\t Total: $total"
+	
+	mail($to, $subject, $message);
+	
 	echo <<<RECEIPT
 	<!doctype html>
 	<html lang="en">
