@@ -8,15 +8,15 @@
 	$school = filter_var($_POST['autocomplete'], FILTER_SANITIZE_STRING);
 	$subject = "ACTM Receipt";
 	
-	$message = "Receipt for $school: \n
-					\t Comprehensive: $comp \n
-					\t Algebra II W/Trig: $trig \n
-					\t Geometry: $geom \n
-					\t Total: $total"
+	$message = "Receipt for ".$school.": \n
+					\t Comprehensive: ".$comp." \n
+					\t Algebra II W/Trig: ".$trig." \n
+					\t Geometry: ".$geom." \n
+					\t Total: ".$total;
 	
 	mail($to, $subject, $message);
 	
-	echo <<<RECEIPT
+echo <<< RECEIPT
 	<!doctype html>
 	<html lang="en">
 	<head>
@@ -49,4 +49,5 @@
 	</body>
 	</html>
 RECEIPT;
+
 ?>
