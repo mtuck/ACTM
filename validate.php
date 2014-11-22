@@ -17,41 +17,33 @@
 	
 	$subject = "ACTM Receipt";
 	
-	$message = "Receipt for ".$school.": \n
-					\t Comprehensive: ".$comp." \n
-					\t Algebra II W/Trig: ".$trig." \n
-					\t Geometry: ".$geom." \n
-					\t Total: ".$total;
+	$message = "Receipt for ".$school.": \n\t Comprehensive: ".$comp." \n \t Algebra II W/Trig: ".$trig." \n \t Geometry: ".$geom." \n\t Total: ".$total;
 	
 	mail($to, $subject, $message);
 	
-<<<<<<< HEAD
-// Create connection
+
+
 	$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
+
 	if ($conn->connect_error) {
 		die("Connection failed: " . $conn->connect_error);
 	} 
-//Insert records into database
-	$sql1 = "INSERT INTO ActmEntries (comprehensiveEntries, trigEntries, geometryEntries, total)
-			VALUES ($comp, $trig, $geom, $total)";
-	$sql2 = "INSERT INTO Schools (School_Name, Address, Zip_Code, School_State)
-			VALUES ($school, $address, $zip, $state)";
-	$sql3 = "INSERT INTO Sponsors (SponsorName, SponsorEmail, SPonsorPhone)
-			VALUES ($sponsorName, $to, $sponsorPhone);
-//Check record creation
+
+	$sql1 = "INSERT INTO ActmEntries (comprehensiveEntries, trigEntries, geometryEntries, total)VALUES (".$comp."," $trig.",".$geom.",".$total.")";
+	$sql2 = "INSERT INTO Schools (School_Name, Address, Zip_Code, School_State)VALUES (".$school.",".$address.",".$zip.",". $state.")";
+	$sql3 = "INSERT INTO Sponsors (SponsorName, SponsorEmail, SPonsorPhone)VALUES (".$sponsorName.",".$to.",".$sponsorPhone.")";
 	if ($conn->query($sql1) === TRUE && $conn->query($sql2) === TRUE && $conn->query($sql3) === TRUE ) {
 		echo "New record created successfully";
 	} else {
 		echo "Error: " . $sql . "<br>" . $conn->error;
 	}
-//Close connecton
+
 	$conn->close();
 	
-	echo <<<RECEIPT
-=======
+	
+
 echo <<< RECEIPT
->>>>>>> origin/master
+
 	<!doctype html>
 	<html lang="en">
 	<head>
